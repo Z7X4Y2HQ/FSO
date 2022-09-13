@@ -6,6 +6,8 @@ const App = (props) => {
   const [newNote, setNewNote] = useState("");
   const [showAll, setShowAll] = useState(true);
 
+  console.log("ching chong");
+
   const notesToShow = showAll ? notes : notes.filter((note) => note.important === true);
 
   const addNote = (event) => {
