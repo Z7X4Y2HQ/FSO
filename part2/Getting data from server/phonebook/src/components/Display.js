@@ -6,9 +6,7 @@ const Display = ({ persons, search }) => {
       {persons
         .filter((e) => e.name.toUpperCase().includes(search.toUpperCase()))
         .map((e) => (
-          <div key={e.name}>
-            {e.name} {e.number}
-          </div>
+          <div key={e.name}>{e.name}</div>
         ))}
     </div>
   );
