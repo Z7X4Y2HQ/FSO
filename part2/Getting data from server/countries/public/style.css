@@ -1,0 +1,9 @@
+.img {
+  width: 40px;
+ animation: img 2s linear infinite;
+}
+
+@keyframes img {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
