@@ -15,22 +15,18 @@ const App = () => {
     const note = notes.find((e) => e.id === id);
     const changeNote = { ...note, important: !note.important };
 
-    noteService.update(id, changeNote).then((response) => {
-      setNotes(notes.map((e) => (e.id !== id ? e : response.data)));
+    noteService.update(id, changeNote).then((returnedNote) => {
+      setNotes(notes.map((e) => (e.id !== id ? e : returnedNote)));
     });
   };
 
   const hook = () => {
-    console.log("effect");
-    noteService.getAll().then((response) => {
-      console.log("Promise Fulfilled");
-      setNotes(response.data);
+    noteService.getAll().then((initialNotes) => {
+      setNotes(initialNotes);
     });
   };
 
   useEffect(hook, []);
-
-  console.log("Render", notes.length, "notes");
 
   const addNote = (event) => {
     event.preventDefault();
@@ -40,15 +36,13 @@ const App = () => {
       important: Math.random() < 0.5,
     };
 
-    noteService.create(noteObject).then((response) => {
-      setNotes(notes.concat(noteObject));
+    noteService.create(noteObject).then((returnedNote) => {
+      setNotes(notes.concat(returnedNote));
       setNewNote("");
-      console.log(response);
     });
   };
 
   const handleNoteChange = (event) => {
-    console.log(event.target.value);
     setNewNote(event.target.value);
   };
 
