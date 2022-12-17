@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Note from "./components/Note";
+import noteService from "./services";
 import axios from "axios";
 
 const App = () => {
@@ -14,14 +15,14 @@ const App = () => {
     const note = notes.find((e) => e.id === id);
     const changeNote = { ...note, important: !note.important };
 
-    axios.put(url, changeNote).then((response) => {
+    noteService.update(id, changeNote).then((response) => {
       setNotes(notes.map((e) => (e.id !== id ? e : response.data)));
     });
   };
 
   const hook = () => {
     console.log("effect");
-    axios.get("http://localhost:3001/notes").then((response) => {
+    noteService.getAll().then((response) => {
       console.log("Promise Fulfilled");
       setNotes(response.data);
     });
@@ -39,7 +40,7 @@ const App = () => {
       important: Math.random() < 0.5,
     };
 
-    axios.post("http://localhost:3001/notes", noteObject).then((response) => {
+    noteService.create(noteObject).then((response) => {
       setNotes(notes.concat(noteObject));
       setNewNote("");
       console.log(response);
