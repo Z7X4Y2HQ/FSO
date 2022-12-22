@@ -2,3 +2,11 @@ h1 {
   color: red;
   font-style: italic;
 }
+
+.someList {
+  color: grey;
+  padding-top: 3px;
+  font-size: 15px;
+  list-style: none;
+  font-size: 40px;
+}
