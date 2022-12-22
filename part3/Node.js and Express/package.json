@@ -1,0 +1,19 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "first node application",
+  "main": "index.js",
+  "scripts": {
+	"start": "node index.js",
+    "test": "console.log(\"hello\")"
+  },
+  "repository": {
+    "type": "git",
+    "url": "./"
+  },
+  "keywords": [
+    "server"
+  ],
+  "author": "z7x4y2hq",
+  "license": "ISC"
+}
