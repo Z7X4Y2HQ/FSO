@@ -1,5 +1,6 @@
 const { request, response } = require("express");
 const express = require("express");
+const cors = require("cors");
 const app = express();
 
 const requestLogger = (request, response, next) => {
@@ -12,6 +13,7 @@ const requestLogger = (request, response, next) => {
 
 app.use(requestLogger);
 app.use(express.json());
+app.use(cors());
 
 let notes = [
   {
@@ -90,6 +92,7 @@ const unknownEndpoint = (request, response) => {
 
 app.use(unknownEndpoint);
 
-const PORT = 3001;
-app.listen(PORT);
-console.log(`Running server on Port ${PORT}`);
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+  console.log(`Running server on Port ${PORT}`);
+});

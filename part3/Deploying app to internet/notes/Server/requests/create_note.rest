@@ -1,0 +1,7 @@
+post http://localhost:3001/api/notes
+Content-type: application/json
+
+{
+  "content": "This is a new note made by the VS Code REST client",
+  "important": true
+}

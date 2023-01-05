@@ -1,0 +1,62 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "content": "HTML is easy",
+      "date": "2022-1-17T17:30:31.098Z",
+      "important": false
+    },
+    {
+      "id": 2,
+      "content": "Browser can execute only JavaScript",
+      "date": "2022-1-17T18:39:34.091Z",
+      "important": false
+    },
+    {
+      "id": 3,
+      "content": "GET and POST are the most important methods of HTTP protocol",
+      "date": "2022-1-17T19:20:14.298Z",
+      "important": false
+    },
+    {
+      "content": "aa",
+      "date": "2022-11-05T08:26:34.928Z",
+      "important": false,
+      "id": 4
+    },
+    {
+      "content": "asda",
+      "date": "2022-11-05T08:29:56.132Z",
+      "important": false,
+      "id": 5
+    },
+    {
+      "content": "asdas",
+      "date": "2022-11-05T08:31:09.468Z",
+      "important": false,
+      "id": 6
+    },
+    {
+      "id": 7,
+      "important": false
+    },
+    {
+      "content": "helklo",
+      "date": "2022-12-16T13:34:49.100Z",
+      "important": false,
+      "id": 8
+    },
+    {
+      "content": "hello",
+      "date": "2022-12-17T07:11:07.632Z",
+      "important": false,
+      "id": 9
+    },
+    {
+      "content": "nigga",
+      "date": "2022-12-17T07:57:12.276Z",
+      "important": true,
+      "id": 10
+    }
+  ]
+}
