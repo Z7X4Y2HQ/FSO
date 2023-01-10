@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URL = "http://localhost:3001/api/persons";
+const URL = "https://shielded-forest-78991.herokuapp.com/api/persons";
 
 const getAll = () => {
   const request = axios.get(URL);

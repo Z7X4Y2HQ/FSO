@@ -2,7 +2,7 @@ import axios from "axios";
 import React from "react";
 
 const Display = ({ setPersons, persons, search }) => {
-  const URL = "http://localhost:3001/persons";
+  const URL = "https://shielded-forest-78991.herokuapp.com/api/persons";
 
   const deletePerson = (id) => {
     axios.delete(`${URL}/${id}`).then((response) => {
